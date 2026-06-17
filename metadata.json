@@ -1,0 +1,8 @@
+{
+  "name": "GovRegistry",
+  "description": "An automated and high-fidelity registry management suite designed on data management principles for tracking, storing, and indexing government documents, letters, files, and reports with real-time audit trails, barcode routing, AI classification, and file movement monitoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
