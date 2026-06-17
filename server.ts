@@ -26,14 +26,14 @@ import {
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Safely resolve __dirname and filenames for CJS / ESM compatibility
+let resolvedDirname = process.cwd();
 
 const PORT = 3000;
-const DB_FILE = path.join(__dirname, "src", "data", "registry.json");
+const DB_FILE = path.join(resolvedDirname, "src", "data", "registry.json");
 
 // Ensure data directory exists
-const dataDir = path.join(__dirname, "src", "data");
+const dataDir = path.join(resolvedDirname, "src", "data");
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
